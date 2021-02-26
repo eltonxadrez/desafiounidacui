@@ -1,0 +1,31 @@
+<div class="container" style="margin-bottom: 50px;">
+
+  <form #usuarioForm="ngForm" (ngSubmit)="salvar(usuarioForm)">
+
+    <div class="ui-g">
+
+      <div class="ui-g-12">
+        <h1>Cadastro Colaborador</h1>
+      </div>
+
+      <div class="ui-g-12">
+
+        <h3 style="margin-bottom: 0;">Nome</h3>
+        <input id="nome" type="text" name="nome" pInputText ngModel>
+
+        <h3 style="margin-bottom: 0;">CPF</h3>
+        <input id="cpf" type="text" name="cpf" pInputText ngModel>
+
+      </div>
+
+      <div class="ui-g-12" style="margin-top: 20px;">
+
+        <p-button type="submit" class="btn btn-primary">CADASTRAR</p-button>
+
+      </div>
+
+    </div>
+
+  </form>
+
+</div>
