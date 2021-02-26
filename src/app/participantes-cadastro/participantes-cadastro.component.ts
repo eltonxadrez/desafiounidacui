@@ -14,11 +14,4 @@ pariticipantes = [];
 
   }
 
-  salvar(form: NgForm){
-    console.log('Salvando...')
-
-    form.reset();
-
-  }
-
 }
