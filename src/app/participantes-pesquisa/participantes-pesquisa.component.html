@@ -13,7 +13,7 @@
 
     <div class="ui-g-12">
 
-      <p-table [value]="colaboradores" [paginator]="true" [rows]="2" [responsive]=true>
+      <p-table [value]="colaboradores" [paginator]="true" [rows]="5" [responsive]=true>
 
         <ng-template pTemplate="header">
           <tr>
@@ -24,9 +24,9 @@
         </ng-template>
         <ng-template pTemplate="body" let-colaborador>
           <tr>
-            <td>{{colaborador.tipo}}</td>
-            <td>{{colaborador.descricao}}</td>
-            <td>{{colaborador.dataVencimento}}</td>
+            <td>{{colaborador.nome}}</td>
+            <td>{{colaborador.cpf}}</td>
+            <td><a *ngFor="let opcao of colaborador.opcoes">{{opcao.nome}} | </a></td>
           </tr>
         </ng-template>
 

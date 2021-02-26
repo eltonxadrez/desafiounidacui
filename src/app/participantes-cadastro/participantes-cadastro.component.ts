@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
+import { ParticipanteService } from '../participante.service';
 
 @Component({
   selector: 'app-participantes-cadastro',
@@ -8,9 +9,17 @@ import { NgForm } from '@angular/forms';
 })
 export class ParticipantesCadastroComponent  {
 
-pariticipantes = [];
+  colaborador = {
+    nome: "",
+    cpf: ""
+  };
 
-  constructor(){
+  constructor(private service: ParticipanteService){
+
+  }
+
+  salvar(form: NgForm){
+    this.service.cadastrar(this.colaborador);
 
   }
 

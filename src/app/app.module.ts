@@ -15,13 +15,16 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { ParticipantesCadastroComponent } from './participantes-cadastro/participantes-cadastro.component';
 import { FormsModule } from '@angular/forms';
 import { ButtonModule } from 'primeng/button';
+import { OpcaoAlimentoCadastroComponent } from './opcao-alimento-cadastro/opcao-alimento-cadastro.component';
+import { DropdownModule } from 'primeng/dropdown';
 
 @NgModule({
   declarations: [
     AppComponent,
     ParticipantesPesquisaComponent,
     NavbarComponent,
-    ParticipantesCadastroComponent
+    ParticipantesCadastroComponent,
+    OpcaoAlimentoCadastroComponent
   ],
   imports: [
     BrowserModule,
@@ -32,7 +35,8 @@ import { ButtonModule } from 'primeng/button';
     TableModule,
     BrowserAnimationsModule,
     FormsModule,
-    ButtonModule
+    ButtonModule,
+    DropdownModule
   ],
   providers: [ParticipanteService],
   bootstrap: [AppComponent]
