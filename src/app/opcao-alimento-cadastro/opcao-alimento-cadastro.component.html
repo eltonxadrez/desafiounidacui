@@ -1,16 +1,19 @@
+<form #alimentoForm="ngForm" (ngSubmit)="salvar(alimentoForm)">
+
 <div class="container" style="margin-bottom: 100px;">
   <div class="ui-g-12">
     <h1>Cadastro Opção de Alimento</h1>
   </div>
   <div class="ui-g-12">
     <h3 style="margin-bottom: 0;">Nome</h3>
-    <input id="nome" type="text" name="nome" pInputText>
+    <input id="nome" type="text" name="nome" pInputText ngModel [(ngModel)]="alimento.nome">
   </div>
   <div>
     <h3 style="margin-bottom: 0;">Colaborador</h3>
-    <p-dropdown placeholder="Selecione um Colaborador" [showClear]="true" optionLabel="colaborador"></p-dropdown>
+    <p-dropdown [options]="participantes" [(ngModel)]="alimento.colaborador.codigo" placeholder="Selecione um Colaborador" [showClear]="true" optionLabel="nome" optionValue="codigo" [ngModelOptions]="{standalone: true}" ></p-dropdown>
   </div>
   <div class="ui-g-12" style="margin-top: 20px;">
     <p-button type="submit" class="btn btn-primary">CADASTRAR</p-button>
   </div>
 </div>
+</form>

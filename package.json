@@ -2,13 +2,12 @@
   "name": "desafio-unidac-ui",
   "version": "0.0.0",
   "scripts": {
+    "ng": "ng",
     "start": "node server.js",
-    "lint": "tslint \"src/**/*.ts\"",
+    "build": "ng build",
     "test": "ng test",
-    "pree2e": "webdriver-manager update",
-    "e2e": "protractor",
-    "preinstall": "npm install -g angular-cli",
-    "postinstall": "ng build && mv dist/* .",
+    "lint": "ng lint",
+    "e2e": "ng e2e",
     "heroku-postbuild": "ng build --prod"
   },
   "engines": {
@@ -36,7 +35,7 @@
     "primeng": "^11.2.3",
     "rxjs": "~6.6.0",
     "tslib": "^2.0.0",
-    "typescript": "~4.1.2",
+    "typescript": "~4.0.2",
     "zone.js": "~0.11.3"
   },
   "devDependencies": {

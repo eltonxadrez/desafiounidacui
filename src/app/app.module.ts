@@ -17,6 +17,8 @@ import { FormsModule } from '@angular/forms';
 import { ButtonModule } from 'primeng/button';
 import { OpcaoAlimentoCadastroComponent } from './opcao-alimento-cadastro/opcao-alimento-cadastro.component';
 import { DropdownModule } from 'primeng/dropdown';
+import {ToastModule} from 'primeng/toast';
+import { MessageService } from 'primeng/api';
 
 @NgModule({
   declarations: [
@@ -36,9 +38,11 @@ import { DropdownModule } from 'primeng/dropdown';
     BrowserAnimationsModule,
     FormsModule,
     ButtonModule,
-    DropdownModule
+    DropdownModule,
+    ToastModule
   ],
-  providers: [ParticipanteService],
-  bootstrap: [AppComponent]
+  providers: [ParticipanteService, MessageService],
+  bootstrap: [AppComponent],
+  exports:[ToastModule]
 })
 export class AppModule { }

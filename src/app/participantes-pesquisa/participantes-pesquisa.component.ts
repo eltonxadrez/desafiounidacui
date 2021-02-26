@@ -21,8 +21,6 @@ export class ParticipantesPesquisaComponent implements OnInit {
   async listar() {
     this.service.listar().then(response => {
       this.colaboradores = response;
-      console.log(this.colaboradores);
-      
     })
   }
 
